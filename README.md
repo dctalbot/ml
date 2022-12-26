@@ -47,7 +47,7 @@ P(C) = 0.01
 
 **Given that you test positive**, what is the probability that you have cancer? (It's about 8.33%)
 
-```math
+```
 (Prior probability) * (evidence) = (posterior probability)
 
 P(C) = 0.01
