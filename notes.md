@@ -84,3 +84,13 @@ $$ H(x) = -\sum_{i=1}^n p(x_i) \log_2 p(x_i) $$
 ```
 information gain = entropy before split - weighted average of entropy after split
 ```
+
+## Choose your own adventure
+
+| strategy            | accuracy |
+| ------------------- | -------- |
+| naive bayes         | 0.9733   |
+| svm                 | 0.9960   |
+| decision trees      | 0.9778   |
+| k-nearest neighbors | 0.9795   |
+| ada boost           | 0.9505   |
