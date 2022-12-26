@@ -27,9 +27,11 @@ The provided code is... rough. I eventually wrangled it into shape. So far the c
 Example:
 
 P(C) = probability of having cancer
+
 P(C) = 0.01
 
 90% it is positive if you have C <-- sensitivity
+
 90% it is negative if you don't have C <-- specificity
 
 **Given that you test positive**, what is the probability that you have cancer? (It's about 8.33%)
@@ -58,3 +60,15 @@ P(-C|+) = 0.1 * 0.99 / 0.108 = 0.9167
 ```
 
 A bit obtuse in its explanation, but it makes sense that we can take advatage of the binary (yes/no) nature of the question at hand in order to derive the result.
+
+## Support Vector Machines (SVM)
+
+- "machine" == "algorithm"
+- defines a decision boundary AKA "hyperplane"
+- **margin** is the distance between the hyperplane and the closest data point
+- a good hyperplane is one that maximizes the margin
+- sometimes the data is not linearly separable, so we can use a **kernel trick** to transform the data into a higher dimension
+- VSM parameters include the kernel type, C, and gamma
+  - C controls the tradeoff between **smooth decision boundary** and **classifying training points correctly** (high C = low margin)
+  - gamma defines how far the influence of a single training example reaches (low gamma = far reach)
+- VSM parameters can be adjusted to prevent **overfitting**
