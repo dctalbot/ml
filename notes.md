@@ -97,3 +97,28 @@ information gain = entropy before split - weighted average of entropy after spli
 | k-nearest neighbors | 0.9795   |
 | ada boost           | 0.9505   |
 | random forest       | 0.9966   |
+
+## Continuous Supervised Learning
+
+- Up until now in this course, we've been dealing with classification problems in which the output is a **discrete** value.
+- **regression** is a supervised learning algorithm that predicts a continuous value
+- We want to minimize the sum of the squared errors (SSE) between the predicted and actual values
+- 2 algorithms for minimizing SSE:
+  - **ordinary least squares** is a closed-form solution that finds the best fit line
+  - **gradient descent** is an iterative algorithm that starts with a random guess and iterates until it finds the best fit
+- Beware: One short coming of SSE is that as you inspect more data, the SSE will almost always increase simply by virtue of having more data points. This is why we use **R-squared** to measure the fitness of a regression line.
+- [**R-squared**](https://www.youtube.com/watch?v=bMccdk8EdGo) is a measure of how well the regression line fits the data (1 = perfect fit, 0 = no fit)
+
+## Comparing Supervised Classification & Supervised Regression
+
+- Aspects of the Regression technique often have analogues in the Classification technique, and vice versa.
+
+| Property           | Classification    | Regression    |
+| ------------------ | ----------------- | ------------- |
+| Output             | Discrete          | Continuous    |
+| Result of training | Decision boundary | Best fit line |
+| Evaluation metric  | Accuracy          | R-squared     |
+
+## Multivariate Regression
+
+- **multivariate regression** is a regression technique that uses more than one feature to predict a continuous value
