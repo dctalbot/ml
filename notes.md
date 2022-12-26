@@ -72,3 +72,15 @@ A bit obtuse in its explanation, but it makes sense that we can take advatage of
   - C controls the tradeoff between **smooth decision boundary** and **classifying training points correctly** (high C = low margin)
   - gamma defines how far the influence of a single training example reaches (low gamma = far reach)
 - VSM parameters can be adjusted to prevent **overfitting**
+
+## Decision Trees
+
+- **entropy** controls how a DT decides where to split the data
+- entropy is a measure of **impurity** in a bunch of examples
+
+<!-- prettier-ignore -->
+$$ H(x) = -\sum_{i=1}^n p(x_i) \log_2 p(x_i) $$
+
+```
+information gain = entropy before split - weighted average of entropy after split
+```
