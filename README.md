@@ -8,9 +8,10 @@ make .venv
 
 Thank you to the following resources and people:
 
-- [Udacity UD120](https://www.youtube.com/watch?v=ICKBWIkfeJ8&list=PLAwxTw4SYaPkQXg8TkVdIvYv4HfLG7SiH)
+- [Udacity UD120 with Sebastian Thrun and Katie Malone](https://www.youtube.com/watch?v=ICKBWIkfeJ8&list=PLAwxTw4SYaPkQXg8TkVdIvYv4HfLG7SiH)
 - [StatQuest with Josh Starmer](https://www.youtube.com/@statquest)
 - The Elements of Statistical Learning
+- [scikit learn folks](https://scikit-learn.org/stable/about.html#authors)
 
 ## Notes
 
@@ -46,7 +47,7 @@ P(C) = 0.01
 
 **Given that you test positive**, what is the probability that you have cancer? (It's about 8.33%)
 
-```
+```math
 (Prior probability) * (evidence) = (posterior probability)
 
 P(C) = 0.01
@@ -97,7 +98,9 @@ information gain = entropy before split - weighted average of entropy after spli
 
 > Trees have one aspect that prevent them from being the ideal tool for predictive learning, namely inaccuracy.
 
-## Emperical comparison of classification algorithms
+## Empirical comparison of classification algorithms
+
+Enron email classification result:
 
 | strategy            | accuracy |
 | ------------------- | -------- |
