@@ -50,27 +50,25 @@ P(C) = 0.01
 ```
 (Prior probability) * (evidence) = (posterior probability)
 
-P(C) = 0.01
-P(-C) = 0.99
-P(+|C)  = 0.9 <-- sensitivity
-P(-|-C) = 0.9 <-- specificity
-P(-|C)  = 0.1
-P(+|-C) = 0.1
+Priors
+P(C)      = 0.01
+P(¬C)     = 0.99
+P(pos|C)  = 0.90 <-- sensitivity
+P(neg|¬C) = 0.90 <-- specificity
+P(neg|C)  = 0.10
+P(pos|¬C) = 0.10
 
 Joint
-P(C|+)  = P(C)  * P(+|C)  = 0.009
-P(-C|+) = P(-C) * P(+|-C) = 0.099
+P(C, pos)  = P(C)  • P(pos|C)  = 0.009
+P(¬C, pos) = P(¬C) • P(pos|¬C) = 0.099
 
-P(+) = P(C|+) + P(-C|+) = 0.108 <-- normalization constant
+Normalizer
+P(pos) = P(C, pos) + P(¬C, pos) = 0.108
 
-P(C|+) = P(+|C) * P(C) / P(+)
-P(C|+) = 0.9 * 0.01 / 0.108 = 0.0833
-
-P(-C|+) = P(+|-C) * P(-C) / P(+)
-P(-C|+) = 0.1 * 0.99 / 0.108 = 0.9167
+Posterior
+P(C|pos)  = P(pos|C)  * P(C)  / P(pos) = 0.0833
+P(¬C|pos) = P(pos|¬C) * P(¬C) / P(pos) = 0.9167
 ```
-
-A bit obtuse in its explanation, but it makes sense that we can take advatage of the binary (yes/no) nature of the question at hand in order to derive the result.
 
 ## Support Vector Machines (SVM)
 
