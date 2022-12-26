@@ -85,6 +85,8 @@ $$ H(x) = -\sum_{i=1}^n p(x_i) \log_2 p(x_i) $$
 information gain = entropy before split - weighted average of entropy after split
 ```
 
+> Trees have one aspect that prevent them from being the ideal tool for predictive learning, namely inaccuracy.
+
 ## Choose your own adventure
 
 | strategy            | accuracy |
@@ -94,3 +96,4 @@ information gain = entropy before split - weighted average of entropy after spli
 | decision trees      | 0.9778   |
 | k-nearest neighbors | 0.9795   |
 | ada boost           | 0.9505   |
+| random forest       | 0.9966   |
