@@ -208,6 +208,10 @@ $$ 0 \le x' \le 1 $$
 1. select a subset of features that yield the most discriminative power when it comes to classifying the data
 2. consider adding new features derived from existing features
 
+## Feature Extraction
+
+- For text processing, use a **stemmer** and remove **stopwords**
+
 ## Bias-Variance Tradeoff
 
 | High Bias                                               | High Variance                 |
