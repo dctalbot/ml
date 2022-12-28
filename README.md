@@ -70,6 +70,12 @@ P(C|pos)  = P(pos|C)  * P(C)  / P(pos) = 0.0833
 P(¬C|pos) = P(pos|¬C) * P(¬C) / P(pos) = 0.9167
 ```
 
+Eaxmple of classifying whether a car should go slow or fast based on the grade and bumpiness of the road:
+
+![naive bayes diagram](./naive_bayes/naive_bayes.png)
+
+- The background represents the trained model, and the scatterplot in the foreground represents the test data.
+
 ## Support Vector Machines (SVM)
 
 - "machine" == "algorithm"
@@ -77,10 +83,22 @@ P(¬C|pos) = P(pos|¬C) * P(¬C) / P(pos) = 0.9167
 - **margin** is the distance between the hyperplane and the closest data point
 - a good hyperplane is one that maximizes the margin
 - sometimes the data is not linearly separable, so we can use a **kernel trick** to transform the data into a higher dimension
+
+![linearly separable diagram](./support_vector_machines/svm_linearity.png)
+
 - VSM parameters include the kernel type, C, and gamma
   - C controls the tradeoff between **smooth decision boundary** and **classifying training points correctly** (high C = low margin)
   - gamma defines how far the influence of a single training example reaches (low gamma = far reach)
 - VSM parameters can be adjusted to prevent **overfitting**
+
+This is the same example as before but with different kernel parameters:
+
+Linear:
+![svm linear decision boundary diagram](./support_vector_machines/svm_car_speed.png)
+
+RBF (may be prone to overfitting):
+
+![svm linear decision boundary diagram](./support_vector_machines/svm_rbf_car_speed.png)
 
 ## Decision Trees
 
@@ -95,6 +113,10 @@ information gain = entropy before split - weighted average of entropy after spli
 ```
 
 > Trees have one aspect that prevent them from being the ideal tool for predictive learning, namely inaccuracy.
+
+## K-Nearest Neighbors
+
+![k nearest neighbors diagram](./k_nearest_neighbors/k_neighbors_viz.png)
 
 ## Empirical comparison of classification algorithms
 
@@ -176,6 +198,13 @@ $$ 0 \le x' \le 1 $$
 | Algo              | Featuring Scaling influences the result? |
 | ----------------- | ---------------------------------------- |
 | Decision Trees    |                                          |
-| SVM w/ RBF kernel | YES                                      |
+| SVM w/ RBF kernel | ✓                                        |
 | Linear Regression |                                          |
-| K-Means           | YES                                      |
+| K-Means           | ✓                                        |
+
+## Feature Selection
+
+1. select a subset of features that yield the most discriminative power when it comes to classifying the data
+2. consider adding new features derived from existing features
+
+## Bias-Variance Dilemma and Number of Features

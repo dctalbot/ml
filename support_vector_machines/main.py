@@ -25,7 +25,7 @@ bumpy_slow = [
 # You will need to complete this function imported from the ClassifyNB script.
 # Be sure to change to that code tab to complete this quiz.
 
-clf = svm.SVC(kernel="linear")
+clf = svm.SVC(kernel="rbf")
 clf.fit(features_train, labels_train)  # define the decision surface
 pred = clf.predict(features_test)
 
