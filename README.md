@@ -232,7 +232,10 @@ $$ 0 \le x' \le 1 $$
 - [**Lasso Regression**](https://www.youtube.com/watch?v=NGf0voTMlcs):
 
 ```math
-\lambda = \text{penalty parameter}\newline
+\lambda = \text{penalty parameter}
+```
+
+```math
 \beta = \text{coefficients of regression (no. of features)}
 ```
 
