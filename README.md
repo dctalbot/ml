@@ -91,9 +91,10 @@ Eaxmple of classifying whether a car should go slow or fast based on the grade a
   - gamma defines how far the influence of a single training example reaches (low gamma = far reach)
 - VSM parameters can be adjusted to prevent **overfitting**
 
-This is the same example as before but with different kernel parameters:
+Here is the same example as before but with different kernel parameters:
 
 Linear:
+
 ![svm linear decision boundary diagram](./support_vector_machines/svm_car_speed.png)
 
 RBF (may be prone to overfitting):
@@ -207,4 +208,34 @@ $$ 0 \le x' \le 1 $$
 1. select a subset of features that yield the most discriminative power when it comes to classifying the data
 2. consider adding new features derived from existing features
 
-## Bias-Variance Dilemma and Number of Features
+## Bias-Variance Tradeoff
+
+| High Bias                                               | High Variance                 |
+| ------------------------------------------------------- | ----------------------------- |
+| Over-simplified                                         | Overfit on training data      |
+| Higher error on **training** data (low $R^2$, high SSE) | Higher error on **test** data |
+
+- Fewer features can lead to higher bias
+- Finding the right balance is a process called **regularization**
+
+![image](./img/bias_variance_reg.png)
+
+## Regularization in Regression
+
+- **Regularization** is a technique that prevents overfitting by penalizing the model for having too many features
+- There are algorithms that can find lambda (cross-validation) and the optimal number of features to use
+
+- [**Lasso Regression**](https://www.youtube.com/watch?v=NGf0voTMlcs):
+
+<!-- prettier-ignore -->
+$ \lambda = \text{penalty parameter} $
+
+$ \beta = \text{coefficients of regression (no. of features)} $
+
+$$ \text{least squares} + \text{regression penalty} $$
+$$ \text{minimize SSE} + \lambda |\beta| $$
+
+<!-- prettier-ignore -->
+$$ \sum_{i=1}^n (y_i - \hat{y_i})^2 + \lambda \sum_{i=1}^n |\beta_i| $$
+
+- Importantly, $\lambda$ can eliminate entire features from the model by settings their coefficients to 0
