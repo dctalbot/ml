@@ -144,3 +144,38 @@ graph LR
   A[Train] --"∃ outliers"--> B[Remove 10%] --> A
   A --good enough--> D[Done]
 ```
+
+## Unsupervised Learning
+
+- **Unsupervised Learning** finds patterns in data that are not labeled, classified, or categorized.
+- **Clustering** is a technique that groups similar data points together
+- **Dimensionality Reduction** is ...
+
+## K-Means Clustering
+
+https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
+
+2 Steps:
+
+1. **Assign** each data point to the cluster center that is closest to it
+2. **Optimize** by minimizing the quadratic distance between each data point and its cluster center
+
+## Feature Scaling
+
+- **Feature Scaling** is a technique that transforms the values of numeric features so that they have similar ranges
+- Example of scaling to `[0,1]`:
+
+<!-- prettier-ignore -->
+$$ x' = \frac{x - x_{min}}{x_{max} - x_{min}}   $$
+
+<!-- prettier-ignore -->
+$$ 0 \le x' \le 1 $$
+
+- Algorithms in which two dimensions affect the outcome will be affected by rescaling.
+
+| Algo              | Featuring Scaling influences the result? |
+| ----------------- | ---------------------------------------- |
+| Decision Trees    |                                          |
+| SVM w/ RBF kernel | YES                                      |
+| Linear Regression |                                          |
+| K-Means           | YES                                      |
